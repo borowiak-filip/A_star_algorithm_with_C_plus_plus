@@ -80,8 +80,8 @@ void print_grid(const std::vector<std::vector<int>>& grid) {
 
 std::vector<Node*> get_neighbours(Node* current, std::vector<std::vector<int>>& grid, int size) {
     std::vector<Node*> neighbours; // all adjecent neighbours for current node
-    int x = current->x; // access current node y coord
-    int y = current->y; // access current node x coord
+    int x = current->x; // access current node x coord
+    int y = current->y; // access current node y coord
 
     // create a vector for storing all possilbe directions {0, -1}, {0, 1} {-1, 0}, {1, 0} || UP, DOWN, LEFT, RIGHT
     std::vector<std::pair<int, int>> directions = {{0, -1}, {0, 1}, {-1, 0}, {1, 0}};
@@ -185,10 +185,6 @@ int main() {
     Node* end_node_ptr = &end_node;
 
     a_star(start_node_ptr, end_node_ptr, grid, size);
-
-
-
-
 
     return 0;
 }
